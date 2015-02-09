@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<style>
+	label{
+		display : block;
+	}
+	</style>
+	<script>
+	window.addEventListener("DOMContentLoaded", init);
+	function init(){
+		var btnCalculate = document.getElementById("btnCalculate");
+		btnCalculate.addEventListener("click", onBtnCalculateClick);
+	}
+	function onBtnCalculateClick(){
+		var tb1 = document.getElementById("txtNumber1");
+		var tb2 = document.getElementById("txtNumber2");
+		var n1 = parseInt(tb1.value);
+		var n2 = parseInt(tb2.value);
+		var operation = document.getElementById("selectOperation").value;
+		var result = 0;
+		if (operation == "+")
+			result = n1 + n2;
+		if (operation == "-")
+			result = n1 - n2;
+		if (operation == "*")
+			result = n1 * n2;
+		if (operation == "/")
+			result = n1 / n2;
+		document.getElementById("divResult").innerHTML = result;
+	}
+	</script>
+</head>
+<body>
+	<div><label for="">Number 1:</label><input type="text" name="" id="txtNumber1"></div>
+	<div><label for="">Number 2:</label><input type="text" name="" id="txtNumber2"></div>
+	<div>
+		<label for="">Operation :</label>
+		<select name="" id="selectOperation">
+			<option value="+">add</option>
+			<option value="-">subtract</option>
+			<option value="*">multiply</option>
+			<option value="/">divide</option>
+		</select>
+		<div><input type="button" value="Calculate" id="btnCalculate"></div>
+		<div>
+			<div id="divResult"></div>
+		</div>
+	</div>
+</body>
+</html>
