@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Greet</title>
+	<script>
+		function greetUser(){
+		   var txtName = document.getElementById("txtName");
+		   var name = txtName.value;
+		   var msg = "Hello " + name + ", Have a nice day!";
+		   var greetMsg = document.getElementById("greetMsg");
+		   greetMsg.innerHTML = msg;
+		}
+		function init(){
+			var btnGreet = document.getElementById("btnGreet");   ~
+			btnGreet.addEventListener("click", greetUser);
+		}
+		window.addEventListener("DOMContentLoaded", init);
+	</script>
+</head>
+<body>
+	<label for="txtName">Name :</label>
+	<input type="text"  id="txtName">
+	<input type="button" value="Greet" id="btnGreet">
+	<div id="greetMsg">[Message to display here]</div>
+</body>
+</html>

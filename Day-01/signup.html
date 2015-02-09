@@ -17,26 +17,26 @@ reset
 	 -->	
 <h1>Sign Up</h1>
 <hr>
-<form>
+<form method="post" action="saveData.pgm">
 <div>
 	<label>First Name :</label>
-	<input type="text" id="txtFirstName"></input>
+	<input type="text" id="txtFirstName" name="firstName"></input>
 </div>
 <div>
 	<label for="txtLastName" accesskey="l">Last Name :</label>
-	<input type="text" id="txtLastName">
+	<input type="text" id="txtLastName" name="lastName">
 </div>
 <div>
 	<label for="#txtDateOfBirth">Date of Birth :</label>
-	<input type="date">
+	<input type="date" name="dob">
 </div>
 <div>
 	<label for="txtAddress">Address :</label>
-	<textarea id="txtAddress"></textarea>
+	<textarea id="txtAddress" name="address"></textarea>
 </div>
 <div>
 	<label for="selectState">State :</label>
-	<select>
+	<select name="state">
 		<option>Karnataka</option>
 		<option value="">Andra Pradesh</option>
 		<option value="">Telengana</option>
@@ -45,7 +45,7 @@ reset
 	</select>
 </div>
 <div>
-	<input type="button" value="Save">
+	<input type="submit" value="Save">
 	<input type="reset" value="Reset">
 </div>
 </form>
