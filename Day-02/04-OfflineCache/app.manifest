@@ -1,0 +1,16 @@
+CACHE MANIFEST
+#VER 2.0
+
+CACHE:
+#List the resources that SHOULD BE cached in the offline cache
+style.css
+taskStorage.js
+taskManager.js
+
+NETWORK:
+#List the resources that SHOULD NOT BE cahced
+*
+
+FALLBACK:
+#List the offline alternatives for online resources
+style-online.css style-offline.css

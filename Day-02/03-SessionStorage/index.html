@@ -13,7 +13,7 @@
 	</style>
 	<script>
 	function getTaskStorage(){
-		var storage = window.localStorage;
+		var storage = window.sessionStorage;
 		return {
 			add : function(taskName){
 				var taskId = new Date().valueOf().toString();
@@ -25,9 +25,9 @@
 			},
 			getAll : function(){
 				var tasks = [];
-				for(var i=0;i<window.localStorage.length;i++){
-					var taskId = window.localStorage.key(i);
-					var taskName = window.localStorage.getItem(taskId);
+				for(var i=0;i<storage.length;i++){
+					var taskId = storage.key(i);
+					var taskName = storage.getItem(taskId);
 					tasks.push({id : taskId, name : taskName});
 				}
 				return tasks;
