@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS 3.0 Demo</title>
+	<style>
+	.content{
+		border : 2px solid black;
+		
+		height : 300px;
+		width : 300px;
+		line-height: 300px;
+		text-align : center;
+		font-size: 32pt;
+		margin : 200px;
+
+		border-radius: 10px;
+		background: -webkit-linear-gradient(top, yellow 0%, yellow 33%, red 33%, red 66%, black 66%, black 100%);
+		background: -moz-linear-gradient(top, yellow 0%, yellow 33%, red 33%, red 66%, black 66%, black 100%);
+		background: -ms-linear-gradient(top, yellow 0%, yellow 33%, red 33%, red 66%, black 66%, black 100%);
+		background: -o-linear-gradient(top, yellow 0%, yellow 33%, red 33%, red 66%, black 66%, black 100%);
+		background: linear-gradient(top, yellow 0%, yellow 33%, red 33%, red 66%, black 66%, black 100%);
+
+		box-shadow: 0px 0px 0px 10px white, 0px 0px 0px 20px gray, 0px 0px 0px 30px blue;
+		text-shadow: 2px 2px 0px white;
+		-webkit-transition : -webkit-transform 0.5s;
+
+	}
+	.content:hover{
+		-webkit-transform : scale(0.5, 0.5) rotate(45deg);
+	}
+	</style>
+</head>
+<body>
+	<div class="content">EMC<sup>2</sup></div>
+</body>
+</html>
